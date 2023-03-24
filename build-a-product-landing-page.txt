@@ -1,0 +1,438 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Sugar Coma</title>
+
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" description="width=viewport-width, initial-scale 1.0">
+    </head>
+    <header id="header">
+        <img src="sugar coma cookie logo.png" id="header-img" class="logo">
+        
+    <nav id="nav-bar">
+        <!--needs three clickable elements class="nav-link" that link to the corresponding section of the landing page-->
+        
+        <a href="#form" class="nav-link">home</a>
+        <a href="#shop" class="nav-link">order</a>
+        <a href="#video" class="nav-link">about</a>
+        <a href="#email" class="nav-link">contact</a>
+    </nav>
+    </header>
+    <body>
+        <div class="form">
+            <form action="https://www.freecodecamp.com/email-submit" id="form"><p id="cookie-club-text"></p>Join Our Cookie Club!</p><br>
+                <input type="email" id="email" 
+        name="email" placeholder=" enter your email address"><br>
+                <!--check for client-side validation-->
+                <input type="submit" id="submit"><!-- to "https://www.freecodecamp.com/email-submit"-->
+            </form>
+            </div>
+        <div class="bullet-block">
+            <div class="bullet">
+                <img src="sugar-coma-cookie-bullet.png" class="bullets bulletimage1">
+                <article id="about">
+                    <h2 class="h2 bullet-header">Fresh & Delicious</h2>
+                    <p class="bullet-text">Baked to order, our cookies will knock your socks off!</p>
+                </article>
+            </div>
+            <div class="bullet">
+                <img src="sugar-coma-cookie-bullet.png" class="bullets bulletimage2">
+                <article id="bullet2">
+                    <h2 class="h2 bullet-header">Pickup or Delivery</h2>
+                    <p class="bullet-text">Convenient pick up times -- Delivery fee based on area.</p>
+                </article>
+            </div>
+            <div class="bullet">
+                <img src="sugar-coma-cookie-bullet.png" class="bullets bulletimage3">
+                <article id="bullet3">
+                    <h2 class="h2 bullet-header">Money-Back Guarantee</h2>
+                    <p class="bullet-text">Love 'em or we'll buy 'em back!</p>
+                </article>
+        </div>
+        </div>
+        <div class="video">
+            <video id="video" src="sugar-coma.mp4" controls autoplay loop width="60%" height="auto"></video>
+        </div>
+        <div class="options" id="shop">
+            <div class="option option1">
+                <img src="sugar-coma-cookie-bullet.png" class="option-bullet">
+                <h3 class="share not-sharing">I'm not sharing</h3>
+                <h1 class="price $40">$40</h1>
+                <p class="option-text option-text-not-sharing">One dozen cookie assortment</p>
+                <input type="submit" class="gimme-some gimme-some-not-sharing" value="Gimme Some">
+            </div>
+            <div class="option option2">
+                <img src="sugar-coma-cookie-bullet.png" class="option-bullet">
+                <h3 class="share might-share">I might share</h3>
+                <h1 class="price $70">$70</h1>
+                <p class="option-text option-text-might-share">Two dozen cookie assortment</p>
+                <input type="submit" class="gimme-some gimme-some-not-sharing" value="Gimme Some">
+            </div>
+            <div class="option option3">
+                <img src="sugar-coma-cookie-bullet.png" class="option-bullet">
+                <h3 class="share sharing">I'm sharing</h3>
+                <h1 class="price $100">$100</h1>
+                <p class="option-text option-text-sharing">Four dozen cookie assortment</p>
+                <input type="submit" class="gimme-some gimme-some-not-sharing" value="Gimme Some">
+            </div>
+        </div>
+    </body>
+    <footer id="footer">
+        <div class="footer">
+        <img src="sugar coma cookie logo.png" class="footer-logo">
+        <p class="footer copyright">copyright 2023</p>
+    </div>
+    </footer>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+/*needs at least one media query*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+    :root {
+        --color0: white;
+        --color1: #CBB8C3;
+        --color2: #d37d54;
+        --color3: #dac15f;
+
+} /* put color variables here*/
+
+html {
+    background: var(--color0);
+}
+#nav-bar {/*--creates the space for the navbar--*/
+    overflow: visible;
+    background-color: var(--color0);
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-width: 30rem;
+    padding-bottom: 1rem;
+    z-index: 5;
+   
+}
+#nav-bar .nav-link {/*--aligns and styles the navbar--*/
+    float: right;
+    display: flex;
+    position: relative;
+    color: black;
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 1.25em;
+    font-family: sans-serif;
+    padding-top: 2rem;
+    z-index: 4;
+   
+}
+.nav-link:hover {
+    text-shadow: 3px 3px 10px var(--color2);
+}
+.nav-link {/*--removes the underline from the nav>li elements--*/
+    text-decoration: none;
+}
+
+.logo { /*--targets the tiny logo for the header--*/
+    display: flex;
+    position: fixed;
+    top: 0;
+    padding-left: 1em;
+    z-index: 6;
+    width: 5.5em
+}
+/*resize bullet points*/
+.bullets {/*--targets all 3 cookie image elements--*/
+    display: flex;
+    position: absolute;
+    padding: 0rem;
+    width: 3rem;
+    height: 3rem;
+    margin-top: 5.5rem;
+    margin-left: 1rem;
+}
+.bullet {/*--creates the white space above the background to highlight the text--*/
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-width: 7rem;
+    height: auto;
+    margin: .5rem;
+    background-color: white;
+    border-radius: 5px;
+    justify-content: center;
+    padding: 1rem;
+    
+}
+.bulletimage1, .bulletimage2, .bulletimage3 {/*--these are the 3 cookies in the bullet element--*/
+    display: block;
+    position: absolute;
+    justify-content: center;
+    margin-top: -.5rem;
+    width: 3rem;
+    height: 3rem;
+    
+
+} 
+
+.bullet-block {/*--creates the space for the .bullet elements--*/
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 16.5rem;
+    top: 0;
+    margin: 1rem 1rem 0rem 0rem;
+    background-color: var(--color1);
+}
+.bullet-header { /*--targets the h2 text of the .bullet element--*/
+    display: block;
+    position: absolute;
+    left: 0;
+    margin: 3rem .5rem .5rem .5rem;
+    text-align: center;
+    width: 85%;
+}
+.bullet-text {
+    display: block;
+    position: absolute;
+    left: 0;
+    margin: 7.75rem 1rem 1rem 1rem;
+   
+    text-align: center;
+
+}
+
+/*center the video presentation*/
+.video { /*--targets the .video div--*/
+    display: flex;
+    position: relative;
+    top: 0;
+    background-color: var(--color1);
+    height: auto;
+    max-height: 25rem;
+    width: 100%;
+
+    
+}
+#video {
+    display: flex;
+    position: absolute;
+    background-color: #CBB8C3;
+    top: 0;
+    width: 100%;
+    max-height: 25rem;
+    min-height: 23rem;
+    margin: 1rem auto 1rem;
+}
+
+/* form style and alignment*/
+.form {/*--creates the background area for the #form element--*/
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 21.75em;
+    background-color: white;
+    margin: -.5rem auto;
+    padding: 1rem 0rem 0rem 1rem;
+    top: 0;
+    z-index: 3;
+    justify-content: center;
+}
+
+#form:hover {
+    box-shadow: 10px 5px 5px var(--color2);
+    z-index: 6;
+}    
+    
+
+#form {/*--targets the #form element--*/
+    display: inline-flex;
+    position: relative;
+    top:0;
+    padding: 2rem;
+    margin: 6.75rem 2rem;
+    justify-content: center;
+    border: double 2px var(--color2);
+    border-radius: 5px;
+    background-color: var(--color1);
+    height: auto;
+    min-height: 10rem;
+    max-height: 18.75rem;
+    width: 70%;
+    min-width: 19rem;
+    max-width: 23rem;
+    font-size: 2em;
+    text-align: center;
+    z-index: 3;
+    
+
+}   
+
+#email {/*targets the email input of the #form*/
+    display: block;
+    position: absolute;
+    margin-top: 4rem;
+    height: 2.5rem;
+    width: 17rem;
+    border-radius: 5px;
+    
+}
+
+#submit {/*--targets the #submit element of the #form--*/
+    display: block;
+    position: absolute;
+    margin-top: 8rem;
+    justify-content: center;
+    background-color: var(--color2);
+    padding: .5rem;
+    border-radius: 5px;
+    width: 5rem;
+}
+
+
+/*--three blocks alignment & styling--*/
+.options {/*--creates the space for the .option element--*/
+    display: flex;
+    position: relative;
+    padding: .5rem;
+    width: 100%;
+    height: auto;
+    top: 0;
+    margin: 27rem 2rem 0rem 0rem;
+    justify-content: center;
+
+
+    background-color: var(--color1);
+}
+.option {/*--creates the 3 white elements to highlight the text--*/
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: .5rem;
+    left: 0rem;
+    background-color: white;
+    border-radius: 5px;
+    justify-content: center;
+    padding: 1rem;
+}
+/*--aligning the elements inside the three option blocks--*/
+.share {
+    display: block;
+    position: absolute;
+    margin: 3rem;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.price {
+    display: block;
+    position: absolute;
+    margin: 7rem;
+}
+
+.option-text {
+    display: block;
+    position: absolute;
+    width: 85%;
+    margin: 10rem 2rem 1rem 1rem;
+    text-align: center;
+    padding-bottom: 2rem;
+
+}
+
+.gimme-some {
+    display: flex;
+    position: relative;
+    width: 6rem;
+    margin-top: 13rem;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #d37d54;
+
+}
+
+.option-bullet {
+    display: flex;
+    position: absolute;
+    width: 3rem;
+    
+    
+}
+
+.footer {/*--creates the space for the footer--*/
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    background-color: #CBB8C3;
+    margin-top: 1rem;
+
+   
+    align-items: center;
+    
+
+}
+/*#footer {
+    display: flex;
+    position: absolute;
+    margin-top: 80rem;
+}*/
+
+.footer-logo { /*--resize the footer logo--*/
+    display: inline-flex;
+    position: absolute;
+    width: 4rem;
+    float: left;
+    z-index: 6;
+
+}
+.copyright {
+    display: inline-flex;
+    position: absolute;
+    width: 100%;
+    justify-content: flex-end;
+    float: right;
+    margin-top: 1rem;
+}
+
+@media (max-width: 500px) {
+    .nav-link, #nav-bar {
+        font-size: small;
+        max-width: 200px fit-content;
+        padding: -1rem;
+        margin: -.5rem 2rem auto -1rem ;
+        margin-right: 2rem;
+    
+    
+        
+    }
+    #nav-bar {
+        height: 4rem;
+        justify-items: center;
+        width: 75%;
+    }
+   
+    .logo {
+        display: block;
+        position: fixed;
+        height: 4.75rem;
+        width: 4.75rem;
+        margin: -.75rem auto auto -.75rem;
+    }
+   
+}
+
+** end of undefined **
+
